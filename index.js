@@ -1,16 +1,25 @@
 const express = require("express");
 const path = require("path");
-const ejs = require("ejs");
+
+const ejsMate = require("ejs-mate")
 
 const app = express();
 
-// app.engine("ejs", ejs);
+app.engine('ejs', ejsMate);
 app.set('view engine', 'ejs');
-app.set("views", path.join(__dirname, "views"));
+app.set("views", path.join(__dirname, "views/"));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
-  res.render('boilerplate/boilerplate');
+  res.render('home');
+});
+
+app.get("/login", (req, res) => {
+  res.render('users/login');
+});
+
+app.get("/register", (req, res) => {
+  res.render('users/register');
 });
 
 app.get("/about", (req, res) => {
