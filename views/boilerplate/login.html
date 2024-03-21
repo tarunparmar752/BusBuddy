@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div class="container">
+      <main class="signup-container">
+        <h1 class="heading-primary">Log in<span class="span-blue">.</span></h1>
+        <p class="text-mute">Enter your credentials to access your account.</p>
+
+        <form class="signup-form">
+          <label class="inp">
+            <input type="email" class="input-text" placeholder="&nbsp;" />
+            <span class="label">Email</span>
+            <span class="input-icon"><i class="fa-solid fa-envelope"></i></span>
+          </label>
+          <label class="inp">
+            <input
+              type="password"
+              class="input-text"
+              placeholder="&nbsp;"
+              id="password"
+            />
+            <span class="label">Password</span>
+            <span class="input-icon input-icon-password" data-password
+              ><i class="fa-solid fa-eye"></i
+            ></span>
+          </label>
+          <button class="btn btn-login">Login</button>
+        </form>
+        <p class="text-mute">Not a member? <a href="#">Sign up</a></p>
+      </main>
+      <div class="welcome-container">
+        <img src="img.png" alt="image" class="image" />
+      </div>
+    </div>
+  </body>
+</html>
